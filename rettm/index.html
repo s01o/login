@@ -1,0 +1,319 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Language" content="zh-CN">
+	<title>2K</title>
+	<script type="text/javascript" src="images/jquery1.42.min.js"></script>
+	<script type="text/javascript" src="images/jquery.SuperSlide.2.1.1.js"></script>
+	<style type="text/css">
+		/* css 重置 */
+* {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: #f7e5cb; 								
+		font-size: 12px;								
+	}
+
+    body {
+    	width: 590px;
+    	height: 442px;
+    	overflow: hidden;
+    	position: relative;
+        background-color: #101010;
+        background-image: url('images/bg.png');
+    }
+
+	html,
+	body {
+		border: 0
+	}
+
+	img {
+		border: 0;
+	}
+	/* 总体背景css */
+
+	.bg {
+		position: relative;
+		width: 590px;
+		height: 442px;
+		overflow: hidden;
+	}
+
+	.bg .bgpic {
+		position: relative;
+		z-index: 0;
+	}
+
+	.bg .bgpic img {
+		width: 590px;
+		height: 442px;
+		display: block;
+	}
+
+	.bg .hd {
+		width: 100%;
+		position: absolute;
+		bottom: 5px;
+		text-align: left;
+		font-size: 0;
+		z-index: 1;
+	}
+
+	.bg .hd li {
+		margin: 0 5px;
+		background: url(images/dot.png) no-repeat 0 -16px;
+		height: 16px;
+		overflow: hidden;
+		width: 16px;
+		cursor: pointer;
+		display: inline-block;
+		*display: inline;
+		zoom: 1;
+		_background: url(images/dot8.png) no-repeat 0 -16px;
+	}
+
+	.bg .hd .on {
+		background-position: 0 0;
+	}
+
+	/* 内容背景css */
+
+	.content {
+		position: absolute;
+		width: 590px;											
+		height: 287px;									
+		overflow: hidden;
+		right:0px;											
+		top:227px;												
+	}
+
+	.content .bgpic {
+		position: relative;
+		z-index: 0;
+	}
+
+	.content .bgpic img {
+		width: 590px;										
+		height: 287px;							
+		display: block;
+	}
+
+	.content .hd {
+		width: 100%;
+		position: absolute;
+		bottom: 136px;										
+		left: 140px;											
+		font-size: 0;
+		z-index: 1;
+	}
+
+	.content .hd li {
+		margin: 0 5px;
+		background: url(images/dot.png) no-repeat 0 -16px;
+		height: 18px;
+		overflow: hidden;
+		width: 18px;
+		cursor: pointer;
+		display: inline-block;
+		*display: inline;
+		zoom: 1;
+		_background: url(images/dot8.png) no-repeat 0 -16px;
+	}
+
+	.content .hd .on {
+		background-position: 0 0;
+	}
+
+	/* 文章列表样式 */
+	.conlist {
+		position: absolute;
+		width: 600px;											
+		height: 40px;									
+		overflow: hidden;
+		left:20px;												
+		top:245px;											
+	}
+	.conlist ul {
+		float: left;
+		width: 50%;
+	}
+	.conlist ul li {
+		padding: 0 15px;
+		height: 20px;										
+      line-height: 20px;							
+	}
+
+
+	.cbutton1 {
+		position: absolute;
+		right:139px;
+		top:1px;											
+	}
+	.cbutton1 ul li a {
+		display: block;
+		width: 1px;											
+		height: 1px; 									
+		background: url(images/null.gif) no-repeat 0 0;				
+	}
+
+	
+
+	.cbutton2 {
+		position: absolute;
+		left:24px;											
+		top:60px;											
+	}
+	.cbutton2 ul li a {
+		display: block;
+		width: 1px;											
+		height: 1px; 										
+		background: url(images/null.gif) no-repeat 0 0;					
+	}
+	.cbutton2 ul li a:hover {
+		background: url(images/null.gif) no-repeat 0 0;		
+	}
+
+	
+	.cbutton3 {
+		position: absolute;
+		left:0px;											
+		top:125px;												
+	}
+	.cbutton3 ul li a {
+		display: block;
+		width: 189px;										
+		height: 42px; 									
+		background: url(images/server_normal.png) no-repeat 0 0;	
+      text-align: center;
+      line-height: 42px;
+      color: #fff;
+      font-size: 12px;
+	}
+	.cbutton3 ul li a:hover {
+		background: url(images/server_hot.png) no-repeat 0 0;		
+	}
+	
+	
+	.cbutton4 {
+		position: absolute;
+		left:0px;											
+		top:166px;												
+	}
+	.cbutton4 ul li a {
+		display: block;
+		width: 189px;										
+		height: 42px; 									
+		background: url(images/server_normal.png) no-repeat 0 0;
+      text-align: center;
+      line-height: 42px;	
+      color: #fff;
+      font-size: 12px;
+	}
+	.cbutton4 ul li a:hover {
+		background: url(images/server_hot.png) no-repeat 0 0;		
+	}
+	
+
+
+</style>
+<body scroll="no">
+<div class="bg">
+	<ul class="bgpic">
+
+		<li>
+			<img src="images/www2.gif" />
+		</li>
+	</ul>
+
+</div>
+
+<script type="text/javascript">
+	jQuery(".bg").slide({
+		mainCell: ".bgpic",
+		effect: "fold",
+		autoPlay: true,
+		interTime: 2500,			
+		delayTime: 329       
+	});
+</script>
+
+<div class="content">
+	<ul class="content-bgpic">
+
+		<li>
+			<a href="https://rettm.com/" target="_blank"><img src="images/hd1.png" /></a>
+		</li>
+		<li>
+			<a href="https://rettm.com/" target="_blank"><img src="images/hd2.png" /></a>
+		</li>
+		<li>
+			<a href="https://rettm.com/" target="_blank"><img src="images/hd3.png" /></a>
+		</li>
+
+	</ul>
+
+	<ul class="hd">
+		<li></li>
+		<li></li>
+		<li></li>
+
+	</ul>
+
+</div>
+
+<script type="text/javascript">
+	jQuery(".content").slide({
+		mainCell: ".content-bgpic",
+		effect: "fold",
+		autoPlay: true,
+		interTime: 2500,					
+		delayTime: 329,				
+		trigger: "click"
+	});
+</script>
+
+
+<!-- 文章列表 开始 -->
+<div class="conlist">
+	<ul>
+		<li><a href="https://rettm.com/" target="_blank">2024年9月9日18:00 伺服器啓動！</a></li>
+	</ul>
+
+</div>
+<!-- 文章列表 结束 -->
+
+<div class="cbutton1">
+	<ul>
+		<li><a href="https://rettm.com/" target="_blank" class="btn1"></a></li>
+	</ul>
+</div>
+
+<div class="cbutton2">
+	<ul>
+		<li><a href="https://rettm.com/" target="_blank" class="btn2"></a></li>
+	</ul>
+</div>
+
+<div class="cbutton3">
+	<ul>
+		<li><a href="https://rettm.com/pay" target="_blank" class="btn3">重生官网</a></li>
+	</ul>
+</div>
+
+
+<div class="cbutton4">
+	<ul>
+		<li><a href="https://rettm.com/qq.html" target="_blank" class="btn3">客服LINE</a></li>
+	</ul>
+</div>
+</body>
+
+
+
+</html>
